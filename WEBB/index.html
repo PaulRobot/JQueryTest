@@ -17,13 +17,16 @@
 <div class="container">
     <div class="inner">Hello</div>
     <div class="inner">Goodbye</div>
-    <div class="backpack">backpack</div>
+
+    <button id="backpack">additem</button>
+    <button id="clear">dropitem</button>
+    <p>backpack</p>
+    <div class="backpack"></div>
 
 </div>
 
 
-    <button id="backpack">additem</button>
-    <button id="clear">dropitem</button>
+
 <script src = "https://code.jquery.com/jquery-3.6.4.js"></script>
 
 <script type="text/javascript">
@@ -41,6 +44,7 @@
     function OnBTNClick ()
     {
         console.log("GOGOGOGOGO");
+        $( ".inner" ).append( '<img src="https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/71UWsefAQ9L._SY355_.jpg"></img>' );
     };
 
     var num = 0;
