@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .redFont{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <button id ="btnGo">Go</button>
+
+<h2>Greetings</h2>
+<div class="container">
+    <div class="inner">Hello</div>
+    <div class="inner">Goodbye</div>
+    <div class="backpack">backpack</div>
+
+</div>
+
+
+    <button id="backpack">additem</button>
+    <button id="clear">dropitem</button>
+<script src = "https://code.jquery.com/jquery-3.6.4.js"></script>
+
+<script type="text/javascript">
+    // A $( document ).ready() block.
+
+    $(function ()
+    {
+        console.log( "ready!" );
+        $( ".inner" ).append( "<p class='redFont'>Test</p>" );
+    });
+    $(function ()
+    {
+        $("#btnGo").click(OnBTNClick);
+    });
+    function OnBTNClick ()
+    {
+        console.log("GOGOGOGOGO");
+    };
+
+    var num = 0;
+
+    $(function ()
+    {
+        $("#backpack").click(Additem);
+        $("#clear").click(clearitem);
+    });
+    function Additem()
+    {
+        $(".backpack").append("<li>"+num+"</li>");
+        num ++;
+    };
+    function clearitem()
+    {
+        $(".backpack").empty();
+        num = 0;
+    }
+</script>
+
+</body>
+</html>
